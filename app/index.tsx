@@ -1,4 +1,4 @@
-import { Welcome } from "components";
+import { Welcome } from "@/components";
 import { SafeAreaView, ScrollView } from "react-native";
 
 export default function Index() {

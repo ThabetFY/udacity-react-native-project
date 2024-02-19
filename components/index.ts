@@ -1,4 +1,5 @@
 // home screen
-import Welcome from "./home/welcome/Welcome";
+import Welcome from "./home/Welcome";
+import Regions from "./regions";
 
-export { Welcome };
+export { Welcome, Regions };
