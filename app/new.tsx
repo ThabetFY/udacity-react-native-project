@@ -1,11 +1,11 @@
 import { SafeAreaView, ScrollView } from "react-native";
-import { Regions } from "@/components";
+import { NewForm } from "components";
 
-export default function ListRegions() {
+export default function New() {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Regions />
+        <NewForm />
       </ScrollView>
     </SafeAreaView>
   );
