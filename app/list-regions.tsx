@@ -3,8 +3,8 @@ import { Regions } from "@/components";
 
 export default function ListRegions() {
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <SafeAreaView className="flex h-screen bg-white">
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Regions />
       </ScrollView>
     </SafeAreaView>

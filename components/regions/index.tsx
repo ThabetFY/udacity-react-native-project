@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import Row from "../common/row";
 import { useRouter } from "expo-router";
+import { Button } from "../common/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "../common/Card";
 
 const regions = [
   { id: "southwest", label: "South West" },
@@ -16,21 +17,35 @@ const Regions = () => {
 
   return (
     <View className="flex-1 items-center gap-8 p-4">
-      <TouchableOpacity onPress={() => router.push("new")}>
-        <View className="mt-4 rounded-md bg-gray-800 p-4">
-          <Text className="text-bold text-lg text-white">Add Customer</Text>
-        </View>
-      </TouchableOpacity>
+      <Button
+        label="Add Customer"
+        size="lg"
+        onPress={() => router.push("new")}
+      />
 
-      <Text className="text-2xl font-extrabold">Regions List</Text>
-
-      <View className="w-full flex-1">
-        {regions && regions.length > 0 ? (
-          regions.map((region) => <Row key={region.id} item={region} />)
-        ) : (
-          <Text>{"No customers in any regions"}</Text>
-        )}
-      </View>
+      <Card className="w-10/12 items-center space-y-2 p-4">
+        <CardHeader>
+          <CardTitle className="text-center">Regions List</CardTitle>
+        </CardHeader>
+        <View className="border-primary-foreground w-10/12 border-2" />
+        <CardContent className="gap-4">
+          {regions && regions.length > 0 ? (
+            regions.map((region) => (
+              <Button
+                size="lg"
+                key={region.id}
+                variant="secondary"
+                label={region.label}
+                onPress={() => {}}
+              />
+            ))
+          ) : (
+            <Text className="text-primary-foreground text-center font-bold">
+              No customers in any regions
+            </Text>
+          )}
+        </CardContent>
+      </Card>
     </View>
   );
 };

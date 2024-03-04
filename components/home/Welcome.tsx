@@ -7,14 +7,7 @@ import {
 } from "react-native";
 
 import { useRouter } from "expo-router";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../common/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "../common/Card";
 import { Button } from "../common/Button";
 
 export default function Welcome() {
