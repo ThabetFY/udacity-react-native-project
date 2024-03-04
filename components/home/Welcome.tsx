@@ -7,28 +7,38 @@ import {
 } from "react-native";
 
 import { useRouter } from "expo-router";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../common/Card";
+import { Button } from "../common/Button";
 
 export default function Welcome() {
   const router = useRouter();
 
   return (
-    <View className="flex-1 items-center p-24">
-      <Text className="text-center text-xl font-bold">
-        Welcome to Customer Manager Plus
-      </Text>
-      <TouchableOpacity
-        onPress={() => router.push("list-regions")}
-        className="mt-4 rounded-md bg-gray-800 p-4"
-      >
-        <Text className="text-white">Click to Continue...</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {}}
-        className="mt-4 rounded-md bg-gray-800 p-4"
-      >
-        <Text className="text-white">Clear Storage...</Text>
-      </TouchableOpacity>
-    </View>
+    <Card className="m-6 space-y-2">
+      <CardHeader>
+        <CardTitle className="text-center">
+          Welcome to Customer Manager Plus
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="gap-2">
+        <Button
+          variant="secondary"
+          label="Click to Continue..."
+          onPress={() => router.push("list-regions")}
+        />
+        <Button
+          label="Clear Storage..."
+          variant="destructive"
+          onPress={() => {}}
+        />
+      </CardContent>
+    </Card>
   );
 }
