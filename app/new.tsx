@@ -3,8 +3,8 @@ import { NewForm } from "components";
 
 export default function New() {
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <SafeAreaView className="bg-white">
+      <ScrollView showsVerticalScrollIndicator={false}>
         <NewForm />
       </ScrollView>
     </SafeAreaView>
